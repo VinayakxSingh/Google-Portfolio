@@ -1,0 +1,119 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh; /* Ensure it takes at least most of the viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.landing-header {
+  margin-bottom: 20px; /* Space between logo and search bar (if search bar is on landing) */
+  text-align: center;
+}
+
+.google-heading {
+  margin: 0; /* Remove default margin */
+}
+
+.google-logo {
+  width: 272px; /* Standard Google logo width */
+  height: auto;
+}
+
+.landing-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 584px; /* Consistent with Google's search bar max width */
+}
+
+.most-visited-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  width: 100%;
+  margin-top: 30px; /* Space above the project items */
+  padding-bottom: 20px; /* Space at the bottom */
+}
+
+.most-visited-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px; 
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.most-visited-item:hover {
+  background-color: #f0f0f0;
+}
+
+.project-image-container {
+  width: 60px; 
+  height: 60px;
+  /* border-radius: 50%;  */
+  background-color: #f1f3f4; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  overflow: hidden; 
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.project-link-wrapper {
+  text-decoration: none; /* Removes underline from link */
+  color: inherit; /* Inherits text color from parent */
+  display: block; 
+}
+
+.project-name {
+  margin-top: 8px; /* Adjusted from 0 to give some space if link wrapper has no top margin */
+  font-size: 13px;
+  color: #3c4043;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .google-logo {
+    width: 200px; /* Smaller logo on mobile */
+  }
+
+  .landing-main {
+    max-width: 90%; /* Allow a bit more width on mobile */
+  }
+  
+  .most-visited-container {
+    gap: 15px; /* Smaller gap on mobile */
+    justify-content: space-around; 
+  }
+
+  .most-visited-item {
+    width: 80px; /* Smaller items on mobile */
+  }
+
+  .project-image-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .project-name {
+    font-size: 12px;
+  }
+}

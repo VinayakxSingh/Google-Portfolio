@@ -1,0 +1,427 @@
+/* Top Header Base Layout */
+.top-header {
+  display: flex;
+  align-items: center;
+  padding: 0 8px; /* Reduced padding for mobile */
+  background-color: #fff;
+  border-bottom: 1px solid #dadce0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 56px;
+}
+
+.header-left,
+.header-middle,
+.header-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-left {
+  flex: 0 0 auto;
+  margin-right: 12px; /* Reduced margin for mobile */
+}
+
+.header-middle {
+  flex: 1 1 auto;
+  max-width: 100%;
+  position: relative;
+  margin: 0 8px; /* Added margin between logo and search */
+}
+
+.header-right {
+  flex: 0 0 auto;
+  margin-left: 8px; /* Reduced margin for mobile */
+}
+
+/* Adjust logo size for mobile */
+.google-logo-img {
+  height: 30px;
+  width: auto;
+  max-width: 92px; /* Prevents logo from being too large on mobile */
+}
+
+/* Search form */
+.search-form {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Logo */
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Search input */
+.header-search-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 44px 0 44px; /* Space for icons on both sides */
+  font-size: 16px;
+  font-family: 'Google Sans', Arial, sans-serif;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  background-color: #f1f3f4;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.header-search-input:hover {
+  background-color: #e8eaed;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.08);
+}
+
+.header-search-input:focus {
+  background-color: #fff;
+  border-color: rgba(25, 103, 210, 0.3);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.15);
+}
+
+/* Search icon inside input */
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5f6368;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Search suggestions dropdown */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 6px rgba(32, 33, 36, 0.28);
+  margin-top: -1px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+.suggestion-item {
+  padding: 8px 16px 8px 44px; /* Match input padding */
+  cursor: pointer;
+  color: #202124;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-item:hover,
+.suggestion-item.highlighted {
+  background-color: #f1f3f4;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.search-suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.search-suggestions {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 0 8px;
+  }
+  
+  .header-left {
+    margin-right: 8px;
+  }
+  
+  .header-middle {
+    margin: 0 4px;
+  }
+  
+  .header-search-input {
+    height: 40px;
+    font-size: 15px;
+    padding: 0 40px 0 40px;
+  }
+  
+  .search-icon {
+    left: 12px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .suggestion-item {
+    padding: 8px 16px 8px 40px;
+    font-size: 15px;
+  }
+  
+  .google-logo-img {
+    height: 26px;
+  }
+  
+  .header-icon-button {
+    padding: 6px;
+  }
+  
+  .profile-picture,
+  .profile-picture-fallback {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .apps-dropdown-menu,
+  .profile-dropdown-menu {
+    min-width: 200px;
+    right: 8px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .header-search-input {
+    font-size: 14px;
+    padding: 0 36px 0 36px;
+  }
+  
+  .search-icon {
+    left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .suggestion-item {
+    padding: 8px 12px 8px 36px;
+    font-size: 14px;
+  }
+  
+  .google-logo-img {
+    height: 24px;
+  }
+  
+  .header-icon-button {
+    padding: 4px;
+  }
+  
+  .profile-picture,
+  .profile-picture-fallback {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .header-search-input {
+    font-size: 13px;
+  }
+  
+  .suggestion-item {
+    font-size: 13px;
+  }
+}
+
+/* Hide elements on very small screens */
+@media (max-width: 320px) {
+  .header-left {
+    display: none;
+  }
+}
+
+/* Header Icons (Apps Grid, Profile) */
+.apps-icon-container, /* Ensure this class wraps the apps icon button in TopHeader.jsx */
+.profile-container { /* Ensure this class wraps the profile picture in TopHeader.jsx */
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.header-icon-button { /* Generic class for icon buttons if needed, or style icons directly */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f6368; /* Google icon color */
+  transition: background-color 0.2s;
+}
+
+.header-icon-button:hover {
+  background-color: rgba(60,64,67,0.08);
+}
+
+.apps-grid-trigger-button:hover {
+  background-color: transparent;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.profile-picture:hover,
+.profile-picture:focus {
+  border-color: rgba(60,64,67,0.12);
+}
+
+/* Fallback for Profile Picture */
+.profile-picture-fallback {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #007bff; /* Example: Blue background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Dropdown Menus */
+.apps-dropdown-menu,
+.profile-dropdown-menu {
+  position: fixed;
+  top: 64px; /* Below the header */
+  right: 16px;
+  background-color: white;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1001;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 280px;
+  max-width: calc(100% - 32px); /* Ensure it doesn't touch screen edges */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.1s ease-out, visibility 0.1s ease-out, transform 0.1s ease-out;
+}
+.apps-dropdown-menu {
+  position: fixed;
+  top: 64px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1001;
+  list-style: none;
+  padding: 8px; /* Reduced padding around the grid */
+  margin: 0;
+  width: 188px; /* Adjusted width for 3 items (52px each) + 8px gap + 8px padding */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px; /* Adjusted gap between grid items */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.1s ease-out, visibility 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.apps-icon-container:hover .apps-dropdown-menu,
+.apps-dropdown-menu:hover,
+.apps-icon-container .header-icon-button:focus + .apps-dropdown-menu,
+.profile-container:hover .profile-dropdown-menu,
+.profile-dropdown-menu:hover,
+.profile-container .profile-picture:focus + .profile-dropdown-menu,
+.profile-container .profile-picture-fallback:focus + .profile-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Enhanced to show dropdown on focus of trigger as well */
+.apps-icon-container .header-icon-button:focus ~ .apps-dropdown-menu,
+.profile-container .profile-picture:focus ~ .profile-dropdown-menu,
+.profile-container .profile-picture-fallback:focus ~ .profile-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.apps-dropdown-menu li,
+.profile-dropdown-menu li {
+  padding: 0;
+}
+
+.profile-dropdown-item-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px; /* Increased padding for better touch targets */
+  text-decoration: none;
+  color: #3c4043;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.apps-dropdown-item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px; /* Padding within each grid item link */
+  text-decoration: none;
+  color: #3c4043;
+  border-radius: 8px; /* Rounded corners for each item */
+  aspect-ratio: 1 / 1; /* Make items square */
+  transition: background-color 0.15s;
+}
+
+.apps-dropdown-item-link:hover,
+.profile-dropdown-item-link:hover {
+  background-color: #f1f3f4;
+}
+
+.profile-dropdown-item-icon {
+  margin-right: 16px; /* More space between icon and text */
+  color: #5f6368;
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Slightly larger icons in dropdown */
+}
+
+.apps-dropdown-item-icon {
+  color: #5f6368;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px; /* Larger icon size for icon-only display */
+  margin-right: 0; /* No margin as it's icon-only */
+}

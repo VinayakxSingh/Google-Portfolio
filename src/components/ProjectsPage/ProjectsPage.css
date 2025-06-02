@@ -1,0 +1,142 @@
+.projects-page-container {
+  padding: 30px 20px; /* Increased top/bottom padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Center the title */
+}
+
+.projects-page-title {
+  font-size: 2.2em; /* Slightly adjusted */
+  color: #202124; /* Darker, more Google-like title color */
+  margin-bottom: 40px;
+  font-weight: 400; /* Google often uses lighter font weights for titles */
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 35px; /* Increased gap */
+  justify-items: center; /* Center cards if they don't fill the row */
+}
+
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Ensure the link takes up the card's space */
+  border-radius: 8px; /* Keep border-radius on the link for the shadow to follow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0,0,0,0.08); /* More pronounced, layered shadow */
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #dadce0; /* Slightly adjusted Google border color */
+  border-radius: 8px;
+  padding: 24px; /* Increased padding */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make cards in a row equal height */
+  box-sizing: border-box;
+  /* The shadow is now on the link hover, so remove static shadow from card if any was there */
+}
+
+.project-card-image-container {
+  width: 100%;
+  height: 190px; /* Slightly increased height */
+  overflow: hidden;
+  border-radius: 6px; /* Slightly more rounded corners for the image container */
+  margin-bottom: 20px; /* Increased margin */
+  background-color: #f1f3f4;
+  border: 1px solid #e0e0e0; /* Subtle border for the image container */
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card-link:hover .project-card-image {
+  transform: scale(1.05); /* Subtle zoom on image hover */
+}
+
+.project-card-name {
+  font-size: 1.3em; /* Adjusted */
+  color: #202124;
+  margin-bottom: 12px; /* Adjusted */
+  font-weight: 500; /* Medium weight */
+  line-height: 1.3;
+}
+
+.project-card-description {
+  font-size: 0.9em; /* Adjusted */
+  color: #5f6368;
+  line-height: 1.6;
+  flex-grow: 1; /* Allows description to take available space */
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.project-card-technologies {
+  margin-top: auto; /* Pushes technologies to the bottom */
+  padding-top: 15px; /* Adjusted */
+  border-top: 1px solid #e8eaed; /* Lighter border */
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #e8f0fe;
+  color: #1967d2;
+  padding: 6px 12px; /* Adjusted padding */
+  border-radius: 16px; /* More pill-like tags */
+  font-size: 0.75em; /* Adjusted */
+  font-weight: 500;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Adjusted breakpoint for 2 columns */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page-title {
+    font-size: 1.8em; /* Adjusted */
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 25px; /* Adjusted gap */
+  }
+  .project-card-name {
+    font-size: 1.2em;
+  }
+  .project-card-description {
+    font-size: 0.85em; /* Adjusted */
+  }
+  .project-card-image-container {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) { /* For very small screens */
+  .projects-page-container {
+    padding: 20px 15px;
+  }
+  .project-card {
+    padding: 20px;
+  }
+  .tech-tag {
+    padding: 5px 10px;
+    font-size: 0.7em;
+  }
+}

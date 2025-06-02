@@ -1,0 +1,139 @@
+/* Styles for About.jsx - Google Style */
+
+.about-page-google {
+  font-family: 'Arial', sans-serif;
+  color: #202124;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+}
+
+.about-header-google {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dfe1e5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.about-profile-image-container-google {
+  margin-right: 20px;
+}
+
+.about-profile-image-google {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f1f3f4;
+}
+
+.about-title-section-google {
+  flex-grow: 1;
+}
+
+.about-name-google {
+  font-size: 28px;
+  font-weight: normal;
+  color: #1a0dab; /* Google link blue */
+  margin: 0 0 5px 0;
+}
+
+.about-intro-google {
+  font-size: 16px;
+  color: #5f6368;
+  margin: 0;
+}
+
+.about-main-content-google {
+  line-height: 1.6;
+}
+
+.about-description-section-google,
+.about-highlights-section-google,
+.about-cta-section-google {
+  margin-bottom: 30px;
+}
+
+.about-section-title-google {
+  font-size: 20px;
+  font-weight: normal;
+  color: #202124;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.about-highlights-grid-google {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.about-highlight-item-google {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+}
+
+.about-highlight-title-google {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3c4043;
+  margin: 0 0 8px 0;
+}
+
+.about-highlight-description-google {
+  font-size: 14px;
+  color: #5f6368;
+  margin: 0;
+}
+
+.about-cta-section-google {
+  text-align: center;
+}
+
+.about-cta-link-google {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #1a73e8; /* Google button blue */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.about-cta-link-google:hover {
+  background-color: #1765cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .about-header-google {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-profile-image-container-google {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .about-name-google {
+    font-size: 24px;
+  }
+
+  .about-intro-google {
+    font-size: 14px;
+  }
+
+  .about-section-title-google {
+    font-size: 18px;
+  }
+}
