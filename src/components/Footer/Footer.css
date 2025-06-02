@@ -31,10 +31,21 @@
   color: #888;
 }
 
+@media (max-width: 768px) {
+  .footer-container {
+    font-size: 0.8rem;
+    padding: 10px 15px;
+  }
+
+  .footer-link {
+    margin: 0 10px;
+  }
+}
+
 @media (max-width: 480px) {
   .footer-container {
     font-size: 0.75rem;
-    padding: 10px 15px;
+    padding: 8px 10px;
   }
 
   .footer-link {

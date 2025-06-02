@@ -97,8 +97,14 @@
 
   .landing-main {
     max-width: 90%; /* Allow a bit more width on mobile */
+    display: flex;
+    justify-content: center; /* Center the content */
   }
-  
+  .search-input-container{
+    justify-content: center;
+    position: relative;
+    right: 30px;
+  }
   .most-visited-container {
     gap: 15px; /* Smaller gap on mobile */
     justify-content: space-around; 

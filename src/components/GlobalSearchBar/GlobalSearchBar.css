@@ -123,8 +123,10 @@
 .search-suggestions {
   position: absolute;
   top: calc(100% + 4px);
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 584px;
   max-height: 360px;
   background: white;
   border: 1px solid #dfe1e5;
@@ -135,34 +137,6 @@
   padding: 8px 0;
   margin: 0;
   list-style: none;
-}
-
-.suggestion-item {
-  display: flex;
-  align-items: center;
-  padding: 8px 24px;
-  cursor: pointer;
-  color: #212121;
-  font-size: 14px;
-  line-height: 20px;
-  transition: background-color 0.1s;
-  text-align: left;
-  text-decoration: none;
-  border: none;
-  background: none;
-  width: 100%;
-  font-family: 'Google Sans', Arial, sans-serif;
-}
-
-.suggestion-item:hover,
-.suggestion-item:focus,
-.suggestion-item.highlighted {
-  background-color: #f1f3f4;
-  outline: none;
-}
-
-.suggestion-item:active {
-  background-color: #e8f0fe;
 }
 
 /* Landing Page Styles */
@@ -203,14 +177,16 @@
   
   .search-suggestions {
     width: 100%;
-    left: 0;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 0 0 16px 16px;
+    max-width: calc(100% - 32px);
   }
   
   .landing .search-suggestions {
     width: calc(100% - 32px);
-    left: 16px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

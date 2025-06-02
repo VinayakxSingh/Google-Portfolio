@@ -26,6 +26,10 @@ body {
   background-color: #fff !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Base Input Styles */
@@ -184,5 +188,32 @@ select {
 
   .input-icon {
     color: var(--input-placeholder) !important;
+  }
+}
+
+/* Global Responsive Utilities */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
